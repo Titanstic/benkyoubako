@@ -96,15 +96,23 @@ const data = [
     }
 ]
 
+
+
 const Level = () => {
     return (
         <div className="w-full flex justify-start items-center flex-col mb-24">
             <p className="text-3xl text-center font-bold text-primary">What is</p>
 
-            <div className="w-[60%] grid grid-cols-6 items-center gap-x-2 gap-y-10 mt-10">
+            <div className="w-[60%] mx-auto grid grid-cols-6 justify-items-center items-center gap-x-2 gap-y-10 mt-10">
                 {
-                    data.map(d => (
-                        <Card color={d.color} label={d.label} borderColor={d.borderColor} level={d.level} key={d.level}/>
+                    data.map((d, index) => (
+                        <>
+                            {
+                                index === 3 && <div className="col-span-1 hidden md:block"> </div>
+                            }
+                            <Card color={d.color} label={d.label} borderColor={d.borderColor} level={d.level} key={d.level}/>
+
+                        </>
                     ))
                 }
             </div>

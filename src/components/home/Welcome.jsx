@@ -1,19 +1,21 @@
+import { motion} from "framer-motion";
+import {dataVariants, dateVariants, homeVariants} from "../../utils/framerMotion.jsx";
+
 const Welcome = () => {
     return(
         <div className="w-full h-screen flex justify-center md:justify-around items-center md:flex-row flex-col">
-            <div className="w-[98%] md:w-[50%] text-primary mb-20 md:mb-0">
-                <p className="font-extrabold text-xl md:text-3xl">Maximize Your JLPT Success with Expert Practice!</p>
-                <p className="md:text-lg my-5">Prepare for your JLPT test with our expert practice sessions. Join us to
+            <motion.div className="w-[98%] md:w-[50%] text-primary mb-20 md:mb-0" variants={homeVariants} initial="hide" animate="show">
+                <motion.p className="font-extrabold text-xl md:text-3xl" variants={dataVariants}>Maximize Your JLPT Success with Expert Practice!</motion.p>
+                <motion.p className="md:text-lg my-5" variants={dataVariants}>Prepare for your JLPT test with our expert practice sessions. Join us to
                     enhance your skills and achieve your highest score ever. Start practicing today and see the
-                    difference!</p>
-                <button className="border border-primary rounded-lg hover:bg-primary hover:text-white px-5 md:px-10 py-3">
-                    Test
-                    Now
-                </button>
-            </div>
+                    difference!</motion.p>
+                <motion.button variants={dataVariants} className="border border-primary rounded-lg transition-colors duration-200 ease-linear hover:bg-primary hover:text-white px-5 md:px-10 py-3">
+                    Test Now
+                </motion.button>
+            </motion.div>
 
-            <div className="relative">
-                <svg className="w-[300px] h-[200px] md:w-[400px] md:h-[298px] " xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 400 298" fill="none">
+            <motion.div className="relative"  variants={dateVariants} initial="hide" animate="show">
+                <motion.svg className="w-[300px] h-[200px] md:w-[400px] md:h-[298px] " xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 400 298" fill="none">
                     <path
                         d="M400 20.404C400 8.46289 389.604 -0.817471 377.74 0.532123L17.7396 41.4821C7.63367 42.6317 0 51.1829 0 61.354V218.556C0 228.551 7.37967 237.012 17.2826 238.37L87.5 248L81 298L128.5 248L378.13 271.446C389.863 272.548 400 263.318 400 251.534V20.404Z"
                         fill="url(#paint0_linear_428_4052)"/>
@@ -24,7 +26,7 @@ const Welcome = () => {
                             <stop offset="1" stopColor="#844F2C"/>
                         </linearGradient>
                     </defs>
-                </svg>
+                </motion.svg>
 
                 <svg className="w-[300px] h-[180px] md:w-[400px] md:h-[265px] absolute left-0 top-0 translate-x-8 z-0"  xmlns="http://www.w3.org/2000/svg" width="400" height="265" viewBox="0 0 400 265" fill="none">
                     <path
@@ -36,7 +38,7 @@ const Welcome = () => {
                     <p className="text-xl md:text-5xl font-bold">128</p>
                     <p className="text-xl md:text-5xl">Days Left</p>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 };

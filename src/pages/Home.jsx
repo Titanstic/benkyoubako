@@ -5,7 +5,7 @@ import TestLists from "../components/home/TestLists.jsx";
 
 const Home = () => {
     return(
-        <div className="w-full">
+        <div className="w-full overflow-x-hidden">
             <Welcome/>
 
             <Level/>
