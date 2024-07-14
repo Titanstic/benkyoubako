@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#834D2A"
+        primary: "#834D2A",
+        border_color: "#54C20B"
       }
     },
   },

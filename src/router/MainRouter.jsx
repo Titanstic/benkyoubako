@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "../components/Layout.jsx";
 import {routeDatas} from "../utils/routeData.jsx";
-import NotFound from "../pages/NotFound.jsx";
+import NotFoundPage from "../pages/NotFoundPage.jsx";
 
 const MainRouter = () => {
     return(
@@ -15,7 +15,7 @@ const MainRouter = () => {
                     }
                 </Route>
 
-                <Route path="*" element={<NotFound/>}/>
+                <Route path="*" element={<NotFoundPage/>}/>
             </Routes>
         </BrowserRouter>
     )

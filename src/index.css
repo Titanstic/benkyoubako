@@ -6,3 +6,11 @@
 /*Start Home */
 
 /*End Home */
+
+.corrects{
+    accent-color: green;
+}
+
+.incorrects{
+    accent-color: red;
+}

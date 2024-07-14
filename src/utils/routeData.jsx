@@ -1,9 +1,14 @@
 import Home from "../pages/Home.jsx";
+import TestPage from "../pages/TestPage.jsx";
 
 export const routeDatas = [
     {
         path: "/",
         element: <Home/>
+    },
+    {
+        path: "/test/:type/:id",
+        element: <TestPage/>
     }
 ];
 

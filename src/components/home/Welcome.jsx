@@ -6,9 +6,11 @@ const Welcome = () => {
         <div className="w-full h-screen flex justify-center md:justify-around items-center md:flex-row flex-col">
             <motion.div className="w-[98%] md:w-[50%] text-primary mb-20 md:mb-0" variants={homeVariants} initial="hide" animate="show">
                 <motion.p className="font-extrabold text-xl md:text-3xl" variants={dataVariants}>Maximize Your JLPT Success with Expert Practice!</motion.p>
-                <motion.p className="md:text-lg my-5" variants={dataVariants}>Prepare for your JLPT test with our expert practice sessions. Join us to
+                <motion.p className="md:text-lg my-5 text-justify" variants={dataVariants}>
+                    Prepare for your JLPT test with our expert practice sessions. Join us to
                     enhance your skills and achieve your highest score ever. Start practicing today and see the
-                    difference!</motion.p>
+                    difference!
+                </motion.p>
                 <motion.button variants={dataVariants} className="border border-primary rounded-lg transition-colors duration-200 ease-linear hover:bg-primary hover:text-white px-5 md:px-10 py-3">
                     Test Now
                 </motion.button>
