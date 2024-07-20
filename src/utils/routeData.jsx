@@ -1,4 +1,5 @@
 import Home from "../pages/Home.jsx";
+import QuestionPage from "../pages/QuestionPage.jsx";
 import TestPage from "../pages/TestPage.jsx";
 
 export const routeDatas = [
@@ -7,8 +8,16 @@ export const routeDatas = [
         element: <Home/>
     },
     {
-        path: "/test/:type/:id",
+        path: "/test/:level/:type",
         element: <TestPage/>
+    },
+    {
+        path: "/test/:level/:type/:id",
+        element: <QuestionPage/>
+    },
+    {
+        path: "/test/:level/quiz",
+        element: <QuestionPage/>
     }
 ];
 

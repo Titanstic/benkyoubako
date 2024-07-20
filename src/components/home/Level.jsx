@@ -1,4 +1,5 @@
 import Card from "./Card.jsx";
+import {Fragment} from "react";
 
 const data = [
     {
@@ -106,13 +107,13 @@ const Level = () => {
             <div className="w-[60%] mx-auto grid grid-cols-6 justify-items-center items-center gap-x-2 gap-y-10 mt-10">
                 {
                     data.map((d, index) => (
-                        <>
+                        <Fragment key={index}>
                             {
                                 index === 3 && <div className="col-span-1 hidden md:block"> </div>
                             }
                             <Card color={d.color} label={d.label} borderColor={d.borderColor} level={d.level} key={d.level}/>
 
-                        </>
+                        </Fragment>
                     ))
                 }
             </div>
